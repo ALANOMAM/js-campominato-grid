@@ -15,10 +15,10 @@ for(let i=0; i<100;i++){
 let scatole = document.createElement("div")
 //aggiungo qualche stile ad ogni scatola nella grid
 scatole.classList.add("box")
+scatole.innerHTML = (i+1)
+
 //appendo le scatole generate al contenitore grid
 griglia.append(scatole)
-
-
 
 }
 
