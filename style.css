@@ -28,3 +28,8 @@ flex-wrap: wrap;
     font-size: 25px;
     color: whitesmoke;
 }
+
+.active{
+    background-color: azure;
+    color: black;
+}
