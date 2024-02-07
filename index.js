@@ -8,29 +8,37 @@ si colora di azzurro ed emetto un messaggio in console con il numero della cella
 Potete realizzare lo stile che volete, sin quando tutto è leggibile con facilità
 */
 
-let griglia = document.querySelector("#grid")
 
+let pulsante = document.querySelector("#btn")
+
+pulsante.addEventListener("click", function(){
+
+    let griglia = document.querySelector("#grid")
+
+    
 for(let i=0; i<100;i++){
- //creo i vari div   
-let scatole = document.createElement("div")
-//aggiungo qualche stile ad ogni scatola nella grid
-scatole.classList.add("box")
-//aggiungo i numeri dentro le scatole
-scatole.innerHTML = (i+1)
-
-// aggiungo event listener che mi identifica la box cliccata, fa cambiare backgroud e mi manda un messaggio in console
-scatole.addEventListener("click",function(){
-
-console.log("la scatola clisccata è : ",this.innerHTML)
-
-this.classList.toggle("active")
+    //creo i vari div   
+   let scatole = document.createElement("div")
+   //aggiungo qualche stile ad ogni scatola nella grid
+   scatole.classList.add("box")
+   //aggiungo i numeri dentro le scatole
+   scatole.innerHTML = (i+1)
+   
+   // aggiungo event listener che mi identifica la box cliccata, fa cambiare backgroud e mi manda un messaggio in console
+   scatole.addEventListener("click",function(){
+   
+   console.log("la scatola clisccata è : ",this.innerHTML)
+   
+   this.classList.toggle("active")
+   
+   })
+   
+   
+   //appendo le scatole generate al contenitore grid
+   griglia.append(scatole)
+   
+   }
+   
+   /*console.log(griglia)*/
 
 })
-
-
-//appendo le scatole generate al contenitore grid
-griglia.append(scatole)
-
-}
-
-/*console.log(griglia)*/
