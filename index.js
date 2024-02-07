@@ -11,9 +11,14 @@ Potete realizzare lo stile che volete, sin quando tutto è leggibile con facilit
 let griglia = document.querySelector("#grid")
 
 for(let i=0; i<100;i++){
+ //creo i vari div   
 let scatole = document.createElement("div")
+//aggiungo qualche stile ad ogni scatola nella grid
 scatole.classList.add("box")
+//appendo le scatole generate al contenitore grid
 griglia.append(scatole)
+
+
 
 }
 
