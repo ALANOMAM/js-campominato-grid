@@ -10,13 +10,22 @@ Potete realizzare lo stile che volete, sin quando tutto è leggibile con facilit
 
 
 let pulsante = document.querySelector("#btn")
+let num 
 
 pulsante.addEventListener("click", function(){
 
     let griglia = document.querySelector("#grid")
-
+    let livelli = document.querySelector("#levels")
+   
+if(livelli.value == "level1"){
+     num = 100
+}else if(livelli.value == "level2"){
+    num = 81
+}else{
+  num=49
+}
     
-for(let i=0; i<100;i++){
+for(let i=0; i<num;i++){
     //creo i vari div   
    let scatole = document.createElement("div")
    //aggiungo qualche stile ad ogni scatola nella grid
