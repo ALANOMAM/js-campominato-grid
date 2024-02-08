@@ -34,18 +34,21 @@ body{
 }
 
 
+.container{
+    max-width: 1000px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
 #grid{
-max-width: 1000px; 
-margin-left: auto; 
-margin-right: auto;
-margin-top:100px;
+width: 1000px; 
+height: 1000px;
 display: flex;
 flex-wrap: wrap;
 }
 
 .box{
-    width: 100px;
-    height: 100px;
     border: 1px solid whitesmoke;
     display: flex;
     justify-content: center;
@@ -53,6 +56,22 @@ flex-wrap: wrap;
     font-size: 25px;
     color: whitesmoke;
 }
+
+.easy{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.medium{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.hard{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
 
 .active{
     background-color: azure;
